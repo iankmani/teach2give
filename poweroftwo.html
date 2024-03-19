@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to check if a number is a power of two
+        function isPowerOfTwo(n) {
+            // If n is less than or equal to 0, it cannot be a power of two
+            if (n <= 0) {
+                return false;
+            }
+
+            return (n & (n - 1)) === 0;
+        }
+
+        console.log(isPowerOfTwo(8));  // Output: true
+        console.log(isPowerOfTwo(10)); // Output: false
+
+    </script>
+</body>
+
+</html>

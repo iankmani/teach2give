@@ -1,0 +1,50 @@
+<!-- Write a program that prints the numbers from 1 to 100. For multiples of 3, print "Fizz"; for
+multiples of 5, print "Buzz"; and for numbers that are multiples of both 3 and 5, print
+"FizzBuzz". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FizzBuzz</title>
+</head>
+<body>
+
+<h1>FizzBuzz</h1>
+
+<div id="output"></div>
+
+<script>
+    // Function to generate FizzBuzz sequence and display it on the page
+    function fizzBuzz() {
+        var output = document.getElementById("output");
+        var result = "";
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                result += "FizzBuzz<br>";
+            } else if (i % 3 === 0) {
+                result += "Fizz<br>";
+            } else if (i % 5 === 0) {
+                result += "Buzz<br>";
+            } else {
+                result += i + "<br>";
+            }
+        }
+
+        output.innerHTML = result;
+    }
+
+    // Call the fizzBuzz function when the page loads
+    fizzBuzz();
+</script>
+
+</body>
+</html>
+
+    
+
+
+
+
+
