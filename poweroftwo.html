@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+    <title>Check Power of Two</title>
     <script>
         // Function to check if a number is a power of two
         function isPowerOfTwo(n) {
@@ -16,13 +13,44 @@
                 return false;
             }
 
+
             return (n & (n - 1)) === 0;
         }
 
-        console.log(isPowerOfTwo(8));  // Output: true
-        console.log(isPowerOfTwo(10)); // Output: false
+        // Function to handle form submission
+        function checkPowerOfTwo() {
+            // Get the value entered by the user
+            var inputValue = parseInt(document.getElementById("inputNumber").value);
 
+            // Check if the input value is a power of two
+            var isPower = isPowerOfTwo(inputValue);
+
+            // Display the result on the webpage
+            var resultElement = document.getElementById("result");
+            if (isPower) {
+                resultElement.innerHTML = inputValue + " is a power of two.";
+            } else {
+                resultElement.innerHTML = inputValue + " is not a power of two.";
+            }
+
+            // Prevent the form from submitting and refreshing the page
+            return false;
+        }
     </script>
+</head>
+
+<body>
+
+    <h2>Check if a Number is a Power of Two</h2>
+
+    <form onsubmit="return checkPowerOfTwo()">
+        <label for="inputNumber">Enter a number:</label>
+        <input type="number" id="inputNumber" name="inputNumber" required>
+        <button type="submit">Check</button>
+    </form>
+
+    <p id="result"></p>
+
 </body>
 
 </html>

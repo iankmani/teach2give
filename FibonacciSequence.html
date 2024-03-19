@@ -2,30 +2,34 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // Function to generate Fibonacci sequence up to a given limit
-function generateFibonacci(limit) {
-    let fibonacciSequence = [0, 1];
+        function generateFibonacci(limit) {
+            let fibonacciSequence = [0, 1];
 
-    while (fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2] <= limit) {
-        fibonacciSequence.push(fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2]);
-    }
+            while (fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2] <= limit) {
+                fibonacciSequence.push(fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2]);
+            }
 
-    return fibonacciSequence;
-}
+            return fibonacciSequence;
+        }
 
-// Call the function with the limit set to 100
-const fibonacciSequenceUpTo100 = generateFibonacci(100);
+        // Call the function with the limit set to 100
+        const fibonacciSequenceUpTo100 = generateFibonacci(100);
 
-// Display the generated Fibonacci sequence
-console.log("Fibonacci sequence up to 100:", fibonacciSequenceUpTo100);
+        // Display the generated Fibonacci sequence
+        console.log("Fibonacci sequence up to 100:", fibonacciSequenceUpTo100);
 
     </script>
 </body>
+
 </html>
+<!-- check debug console for result -->

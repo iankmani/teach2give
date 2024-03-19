@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize Words</title>
+    <script>
+        // Function to capitalize the first letter of each word in a string
+        function capitalizeWords(inputString) {
+            // Split the input string into an array of words
+            let words = inputString.split(" ");
+
+            // Iterate through each word in the array
+            for (let i = 0; i < words.length; i++) {
+                // Capitalize the first letter of each word
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+            }
+
+            // Join the words back into a single string
+            let resultString = words.join(" ");
+
+            return resultString;
+        }
+
+        // Function to handle form submission
+        function handleFormSubmit() {
+            // Get the value entered by the user
+            let inputString = document.getElementById("inputString").value;
+
+            // Capitalize the words in the input string
+            let result = capitalizeWords(inputString);
+
+            // Display the result on the webpage
+            document.getElementById("output").innerHTML = result;
+
+            // Prevent the form from submitting and refreshing the page
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Capitalize Words in a String</h2>
+
+    <form onsubmit="return handleFormSubmit()">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" name="inputString" required>
+        <button type="submit">Capitalize</button>
+    </form>
+
+    <p id="output"></p>
+
+</body>
+
+</html>
