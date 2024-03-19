@@ -1,0 +1,47 @@
+<!-- Write a program that counts the number of vowels in a sentence. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Vowels</title>
+    <script>
+
+        function countVowels() {
+
+            var sentence = document.getElementById("sentence").value;
+
+            s
+            var vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+
+
+            var vowelCount = 0;
+
+
+            for (var i = 0; i < sentence.length; i++) {
+                if (vowels.has(sentence[i])) {
+                    vowelCount++;
+                }
+            }
+            document.getElementById("output").innerHTML = "Number of vowels: " + vowelCount;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Count Vowels</h2>
+
+    <form onsubmit="return countVowels()">
+        <label for="sentence">Enter a sentence:</label>
+        <input type="text" id="sentence" name="sentence" required>
+        <button type="submit">Count</button>
+    </form>
+
+    <p id="output"></p>
+
+</body>
+
+</html>

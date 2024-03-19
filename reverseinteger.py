@@ -1,8 +1,10 @@
+# Write a program that takes an integer as input and returns an integer with reversed digit
+# ordering.
 def reverse_integer(n):
-    # Convert the integer to a string to make it iterable
+    # Convert the integer to a string to make it echo
     num_str = str(n)
     
-    # Handle negative numbers
+    
     if num_str[0] == '-':
         reversed_str = '-' + num_str[:0:-1]  # Reverse the string excluding the negative sign
     else:
@@ -13,8 +15,4 @@ def reverse_integer(n):
     
     return reversed_int
 
-#examples given are:
-print(reverse_integer(500))  # Output: 5
-print(reverse_integer(-56))  # Output: -65
-print(reverse_integer(-90))  # Output: -9
-print(reverse_integer(91))   # Output: 19
+
